@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let salario = Number(window.prompt("Qual é o seu salario?"));
+        let aumento = salario * 0.15;
+        let total = salario + aumento;
+
+        let dolar = salario * 5.5;
+
+        document.write(`O seu salario é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} e o aumento de 15% é ${aumento.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} ficando o total de ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. <br>`);
+        
+        document.write(`No dolar atual o seu salario é de ${dolar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`);
+    </script>
+</body>
+</html>
