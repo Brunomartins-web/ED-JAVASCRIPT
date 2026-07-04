@@ -12,46 +12,30 @@
         }
 
         body{
+            height: 100vh;
             background-color: brown;
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .center{
             display: flex;
-    
+            flex-direction: column;
+
             justify-content: center;
             align-items: center;
-         
+            text-align: center1;
         }
-
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
 
         h1{
             color: white;
-            display: flex;
-            justify-content: center;
-            text-align: center;
         }
 
         p{
             color: white;
-            display: flex;
-            justify-content: center;
-            text-align: center;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <div class="center">
-        <div class="container">
             <h1>Olá, Mundo</h1>
             <p>Seja bem vindo, Javascript!</p>
-        </div>
-    </div>
 
     <script>
         let n1 = Number(window.prompt("DIGITE O PRIMEIRO NUMERO"));
@@ -59,7 +43,7 @@
 
         soma = n1 + n2;
 
-        window.alert("A soma desses dois numero é " + soma );
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${soma}`);
     </script>
 </body>
 </html>
