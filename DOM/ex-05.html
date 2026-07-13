@@ -51,22 +51,54 @@
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a Usar <strong>DOM</strong> em Javascrip</p>
 
-    <div>CLIQUE EM MIM</div>
+    <div class="msg">CLIQUE EM MIM</div>
     
     <script>
 
-        let corpo =  window.document.body 
-
+        // EX 01: let corpo =  window.document.body 
+        // EX 01: corpo.style.backgroundColor = "black"
+        
         let p1 = document.getElementsByTagName("p")[0]
 
         let p2 = document.getElementsByTagName("p")[1]
 
-        // corpo.style.backgroundColor = "black"
+        let msg = document.querySelector("div.msg") 
+        // PONTO PARA CLASS E # PARA ID
+        // let msg = document.querySelector("div#msg")
+
+        msg.style.cursor = "pointer"
+        msg.addEventListener("click", function(){
+            p1.innerText = "Mudei esse texto!"
+            p2.innerText = "Mudei esse texto também!"
+        })
 
 
-        window.document.write(`Está escrito assim no primeiro paragrafo: ${p1.innerText} <br>`)
 
-        window.document.write(`Está escrito assim no segundo paragrafo: ${p2.innerText}`)
+        // EX 03: POR NAME:
+
+        // let msg = document.getElementsByName("msg")[0]
+
+        // msg.innerText = "Mudei esse texto!"
+        // msg.style.cursor = "pointer"
+
+        // EX 02: POR ID
+
+        // EX 02: let btn = document.getElementById("msg")
+        
+        // btn.style.cursor = "pointer"
+        // btn.style.fontSize = "20px"
+        // btn.style.fontWeight = "700"
+        // btn.style.color = "white"
+        // btn.style.textTransform = "uppercase"
+        // btn.style.transition = "all 0.5s"
+        // btn.style.borderRadius = "5px"
+        // btn.style.padding = "10px"
+        // btn.innerText = "Mudei esse texto dessa forma!"
+
+
+        document.write(`Está escrito assim no primeiro paragrafo: ${p1.innerText} <br>`)
+
+        document.write(`Está escrito assim no segundo paragrafo: ${p2.innerText}`)
     </script>
 </body>
 </html>
