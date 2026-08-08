@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descobrindo o Mes Que Voce Nasceu!</h1>
+
+    <p>Qual é a sua idade? <br><input type="number" id="idade"> <input type="button" value="click!" id="calc"></p>
+    <p id="res"></p>
+
+<script>
+    let year = document.getElementById('idade')
+    let btn = document.getElementById('calc')
+    let recebe = document.getElementById('res')
+
+    btn.addEventListener('click', calc)
+
+    function calc(){
+        let conversao = Number(year.value)
+        let anoAtual = new Date().getFullYear()
+
+        let resultado = anoAtual - conversao
+
+        recebe.innerText= `Voce nasceu aproximadamente no ano de ${resultado}.`
+    }
+
+</script>
+</body>
+</html>

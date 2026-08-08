@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let salario = Number.parseFloat(window.prompt("Quanto você recebe por mês?"))
+
+        document.write(`O seu salario é: ${salario.toLocaleString('PT-BR', {style: "currency", currency: 'BRL'})}`)
+    </script> -->
+
+    <script>
+        let produto = Number(window.prompt("Qual o valor do produto?"));
+
+        let desconto = Number.parseInt(window.prompt("Qual a porcentagem de desconto?"));
+
+        let ValorDesconto = produto * (desconto / 100);
+
+        let precoFinal = produto - ValorDesconto;
+
+        document.write(`O valor do produto é: ${produto.toLocaleString('pt-BR', {style: "currency", currency: 'BRL' })} <br>`);
+
+        document.write(`Desconto: ${desconto}% <br>`);
+
+        document.write(`O valor do desconto é: ${ValorDesconto.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})} <br>`);
+
+        document.write(`O preço final: ${precoFinal.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})} <br>`)
+
+
+
+    </script>
+</body>
+</html>

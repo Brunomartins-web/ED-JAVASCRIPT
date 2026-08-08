@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+
+    <input type="date" placeholder="Digite sua data de nascimento" id="data">
+    <input type="button" value="calcular" id="calc">
+
+    <p id="resultado"></p>
+
+    <script>
+        let date = document.getElementById('data')
+        let btn = document.getElementById('calc')
+        let res = document.getElementById('resultado')
+
+        btn.addEventListener('click', calc)
+
+        function calc(){
+
+        let conversao = new Date(date.value) //Date transforma em data
+
+        let anoNascimento = conversao.getFullYear() //getdfull filltra apenas o ano
+
+        let anoAtual = new Date().getFullYear()
+
+        let idade = anoAtual - anoNascimento
+
+        res.innerText= `Sua idade atual é aproximadamente ${idade} anos.`
+        }
+    </script>
+</body>
+</html>

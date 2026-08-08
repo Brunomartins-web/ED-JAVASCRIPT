@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WEB-XD</h1>
+
+    <input type="text" placeholder="Qual o seu nome?" id="name">
+    <input type="button" value="enviar" id="enviar">
+
+    <p id="recebe"></p>
+
+    <script>
+        
+        let clicar = document.getElementById('enviar')
+        let mudar = document.getElementById('recebe')
+        let nome = document.getElementById('name')
+
+        clicar.addEventListener('click', enviar)
+        
+        function enviar(){
+            mudar.innerText = `Seja bem vindo ${nome.value}!`
+        }
+    </script>
+    
+</body>
+</html>
