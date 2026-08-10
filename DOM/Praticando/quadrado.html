@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado</title>
+    <style>
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .btn1{
+            height: 100px;
+            width: 200px;
+
+            border-radius: 10px;
+
+            background-color: red;
+
+            justify-content: center;
+
+            text-align: center;
+
+            border: 3 px solid rgb(255, 255, 255);
+        }
+        .btn2{
+            height: 100px;
+            width: 200px;
+
+            border-radius: 10px;
+
+            background-color: blue;
+
+            justify-content: center;
+
+            text-align: center;
+
+            border: 3 px solid black;
+        }
+        .btn3{
+            height: 100px;
+            width: 200px;
+
+            border-radius: 10px;
+
+            background-color: green;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            border: 3 px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="btn1" onclick="clicar()"><p>Botão 1</p>
+    </div>
+    <div class="btn2" onclick="clicar2()">
+        <p>Botão 2</p>
+    </div>
+    <div class="btn3" onclick="clicar3()">
+        <p>Botão 3</p>
+    </div>
+
+    <script>
+        let b1 = document.getElementById('btn1')
+        let b2 = document.querySelector('div.btn2')
+        let b3 = document.querySelector('div.btn3')
+
+        
+
+        b1.addEventListener('click', clicar )
+        b2.addEventListener('click', clicar)
+        b3.addEventListener('click', clicar )
+        
+
+        function b1(){
+            quadrado.style = pointer;
+            quadrado.innerText = 'Clicou!'
+            quadrado.style.backgroundColor = 'red'
+        }
+
+    </script>
+</body>
+</html>
