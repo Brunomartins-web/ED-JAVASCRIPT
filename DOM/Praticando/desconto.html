@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+
+    <style>
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        input{
+            height: 30px;
+            width: 200px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .modal{
+            height: 100px;
+            width: 200px;
+
+            border-radius: 10px;
+
+
+            justify-content: center;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="produto" placeholder="Digite o valor do produto">
+    <input type="number" id="desconto" min="0" max="100" placeholder="Digite o valor do desconto">
+    <input type="button" value="Calcular" id="calcular">
+
+    <div id="modal">
+    </div>
+
+
+    <script>
+
+        let produto = document.getElementById('produto');
+        let desconto = document.getElementById('desconto');
+        let calcular = document.getElementById('calcular');
+        let modal = document.getElementById('modal');
+
+        calcular.addEventListener('click', calcular)
+
+        function calcular(){
+
+            let conversaoPro = Number(produto.value)
+            let conversaoDes = Number(desconto.value)
+
+            let valorDesconto = conversaoPro * (conversaoDes / 100)
+
+            modal.innerText = `Preço original é: ${conversaoPro.toLocaleString('pt-BR', {style: "currency", currency: 'BRL' })}`
+        }
+
+
+    </script>
+</body>
+</html>

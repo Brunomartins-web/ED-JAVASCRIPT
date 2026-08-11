@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadrado</title>
+    <title>MUDANÇA DE COR</title>
     <style>
         body{
             height: 100vh;
@@ -15,9 +15,11 @@
             gap: 40px;
         }
 
-        .btn1{
+        #btn1{
             height: 100px;
             width: 200px;
+
+            display: flex;
 
             border-radius: 10px;
 
@@ -26,8 +28,18 @@
             justify-content: center;
 
             text-align: center;
+        }
 
-            border: 3 px solid rgb(255, 255, 255);
+        p{
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-size: 20px;
+
+          font-weight:700;
+
         }
         .btn2{
             height: 100px;
@@ -36,6 +48,7 @@
             border-radius: 10px;
 
             background-color: blue;
+            display: flex;
 
             justify-content: center;
 
@@ -50,6 +63,7 @@
             border-radius: 10px;
 
             background-color: green;
+            display: flex;
 
             justify-content: center;
 
@@ -63,31 +77,57 @@
     </style>
 </head>
 <body>
-    <div id="btn1" onclick="clicar()"><p>Botão 1</p>
-    </div>
-    <div class="btn2" onclick="clicar2()">
+    <div id="btn1"><p>Botão 1</p></div>
+    <div class="btn2">
         <p>Botão 2</p>
     </div>
-    <div class="btn3" onclick="clicar3()">
+    <div class="btn3">
         <p>Botão 3</p>
     </div>
 
     <script>
-        let b1 = document.getElementById('btn1')
+        let b1 = document.querySelector('div#btn1')
         let b2 = document.querySelector('div.btn2')
         let b3 = document.querySelector('div.btn3')
 
         
 
-        b1.addEventListener('click', clicar )
-        b2.addEventListener('click', clicar)
-        b3.addEventListener('click', clicar )
+        b1.addEventListener('click', clicar1 )
+        b2.addEventListener('click', clicar2 )
+        b3.addEventListener('click', clicar3 )
         
 
-        function b1(){
-            quadrado.style = pointer;
-            quadrado.innerText = 'Clicou!'
-            quadrado.style.backgroundColor = 'red'
+        function clicar1(){
+            b1.innerText = 'Clicou!'
+            b1.style.color = 'white'
+            b1.style.fontWeight = '700'
+            b1.style.dispqlay = 'flex'
+            b1.style.justifyContent = 'center'
+            b1.style.alignItems = 'center'
+            b1.style.textAlign = 'center'
+            b1.style.backgroundColor = 'yellow'
+        }
+
+        function clicar2(){
+            b2.innerText = 'Clicou!'
+            b2.style.color = 'white'
+            b2.style.fontWeight = '700'
+            b2.style.dispqlay = 'flex'
+            b2.style.justifyContent = 'center'
+            b2.style.alignItems = 'center'
+            b2.style.textAlign = 'center'
+            b2.style.backgroundColor = 'purple'
+        }
+
+        function clicar3(){
+            b3.innerText = 'Clicou!'
+            b3.style.color = 'white'
+            b3.style.fontWeight = '700'
+            b3.style.dispqlay = 'flex'
+            b3.style.justifyContent = 'center'
+            b3.style.alignItems = 'center'
+            b3.style.textAlign = 'center'
+            b3.style.backgroundColor = 'orange'
         }
 
     </script>
