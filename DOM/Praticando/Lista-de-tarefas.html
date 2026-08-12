@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+
+<body>
+    <input type="text" id="tarefas" placeholder="Digite Uma Tarefa">
+    <input type="button" value="Clique" id-="adicionar">
+
+    <ul id="lista"></ul>
+
+    <script>
+
+        const tarefa = document.getElementById('tarefas')
+        const adicionar = document.getElementById('adicionar')
+        const lista = document.getElementById('lista')
+
+        adicionar.addEventListener('click', adicionarTarefa)
+
+        function adicionarTarefa() {
+
+            const item = document.createElement('li')
+
+            item.innerText = tarefa.value
+
+            lista.appendChild(item)
+        }
+
+    </script>
+</body>
+
+</html>
