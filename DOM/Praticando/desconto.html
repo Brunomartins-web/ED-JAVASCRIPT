@@ -58,9 +58,9 @@
         let calcular = document.getElementById('calcular');
         let modal = document.getElementById('modal');
 
-        calcular.addEventListener('click', calcular)
+        calcular.addEventListener('click', calcularDesconto)
 
-        function calcular(){
+        function calcularDesconto(){
 
             let conversaoPro = Number(produto.value)
             let conversaoDes = Number(desconto.value)
@@ -68,6 +68,7 @@
             let valorDesconto = conversaoPro * (conversaoDes / 100)
 
             modal.innerText = `Preço original é: ${conversaoPro.toLocaleString('pt-BR', {style: "currency", currency: 'BRL' })}`
+            modal
         }
 
 
