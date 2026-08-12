@@ -28,18 +28,6 @@
 
             text-align: center;
         }
-
-        .modal{
-            height: 100px;
-            width: 200px;
-
-            border-radius: 10px;
-
-
-            justify-content: center;
-
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -53,22 +41,27 @@
 
     <script>
 
-        let produto = document.getElementById('produto');
-        let desconto = document.getElementById('desconto');
-        let calcular = document.getElementById('calcular');
-        let modal = document.getElementById('modal');
+        const produto = document.getElementById('produto');
+        const desconto = document.getElementById('desconto');
+        const calcular = document.getElementById('calcular');
+        const modal = document.getElementById('modal');
 
         calcular.addEventListener('click', calcularDesconto)
 
         function calcularDesconto(){
 
-            let conversaoPro = Number(produto.value)
-            let conversaoDes = Number(desconto.value)
+            const conversaoPro = Number(produto.value)
+            const conversaoDes = Number(desconto.value)
 
-            let valorDesconto = conversaoPro * (conversaoDes / 100)
+            const valorDesconto = conversaoPro * (conversaoDes / 100)
 
-            modal.innerText = `Preço original é: ${conversaoPro.toLocaleString('pt-BR', {style: "currency", currency: 'BRL' })}`
-            modal
+            const valorFinal = conversaoPro - valorDesconto
+
+            modal.innerText = 
+            `Preço original é: ${conversaoPro.toLocaleString('pt-BR', {style: "currency", currency: 'BRL' })}\n
+            Desconto: ${conversaoDes}%\n
+            Valor do Desconto: ${valorDesconto.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})}\n
+            Valor final: ${valorFinal.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})}\n`
         }
 
 
