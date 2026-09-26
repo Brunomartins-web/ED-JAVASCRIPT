@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="./css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div class="ano-nascimento">
+           <p>Ano de Nascimento</p>
+        </div>
+        <input type="number" name="txtano" id="txtano" min="0" placeholder="Digite o ano de nascimento...">
+        <p class="sexo">Sexo:
+            <input type="radio" name="radsex" id="masc">
+            <label for="masc">Masculino</label>
+            <input type="radio" name="radsex" id="fem">
+            <label for="fem">Feminino</label>
+        </p>
+
+        <p>
+        <input type="button" value="Verificar" onclick="verificar()" class="btn-verificar">
+        </p>
+
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; BrunoMartins
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

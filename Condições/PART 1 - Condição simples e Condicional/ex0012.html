@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VERIFICADOR DE NACIONALIDADE BRASILEIRA</h1>
+
+    Qual Pais você nasceu? <input type="text" name="pais" id="paises">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res"></div>
+    <script>
+
+        function verificar(){
+            let pais = document.getElementById("paises");
+            let resultado = document.getElementById("res");
+
+            let txt = (pais.value)
+
+            resultado.innerHTML = `<p>Vocé nasceu no(a) ${txt}!</p>`;
+
+            if (txt === "Brasil" || txt === "brasil" || txt === "BRASIL") {
+                resultado.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`;
+            } else {
+                resultado.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`;
+            }
+        }
+    </script>
+</body>
+</html>

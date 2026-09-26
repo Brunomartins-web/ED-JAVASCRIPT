@@ -1,0 +1,328 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    background: rgb(5, 35, 126);
+
+    font: normal 15pt Arial;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    /* Espaçamento para evitar que o conteúdo
+       encoste nas laterais em telas pequenas */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+
+    margin: 0,5rem;
+}
+
+
+header h1 {
+    color: white;
+
+    text-align: center;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    /* O clamp faz o tamanho se adaptar
+       automaticamente à tela */
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    padding-bottom: 15px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    /*
+       Em uma tela grande:
+       máximo de 600px.
+
+       Em uma tela pequena:
+       ocupa no máximo 90% da largura.
+    */
+    width: min(600px, 90vw);
+
+    /*
+       Não usamos mais uma altura fixa.
+       Assim o conteúdo pode crescer
+       conforme necessário.
+    */
+    min-height: 500px;
+
+    height: auto;
+
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.418);
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.ano-nascimento {
+    font-size: 30px;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#txtano {
+    width: 300px;
+    padding: 12px 15px;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* Quando o usuário clica no input */
+input:focus {
+    border-color: #0f0fac;
+
+    box-shadow: 0 0 8px rgba(16, 19, 176, 0.4);
+}
+
+/* Estilo do texto de exemplo */
+input::placeholder {
+    color: #999;
+}
+
+.sexo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    width: 300px;
+    padding: 12px 15px;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    background-color: white;
+
+     font-family: "DotGothic16", sans-serif;
+
+
+    font-size: 18px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+.btn-verificar{
+     width: 300px;
+    padding: 12px 15px;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    background-color: white;
+
+     font-family: "DotGothic16", sans-serif;
+
+
+    font-size: 22px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+.btn-verificar:hover{
+     border-color: #0f0fac;
+
+    box-shadow: 0 0 8px rgba(16, 19, 176, 0.4);
+}
+
+#res{
+
+    padding-top: 40px;
+    font-size: 20px;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+#foto img {
+    border-radius: 50%;
+
+    /*
+       A imagem nunca passa de 400px,
+       mas também não ultrapassa
+       a largura disponível.
+    */
+    width: min(400px, 70vw);
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 15px;
+
+    color: white;
+
+    text-align: center;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    header {
+        margin: 1rem 0;
+    }
+
+
+    section {
+        width: 100%;
+
+        min-height: 400px;
+
+        padding: 20px;
+    }
+
+
+    #foto img {
+        width: min(300px, 70vw);
+    }
+
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   NOTEBOOK
+========================= */
+
+@media (min-width: 601px) and (max-width: 1400px) {
+
+    section {
+        width: 550px;
+        min-height: 450px;
+    }
+
+    #foto img {
+        width: 330px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* =========================
+   TELAS GRANDES
+========================= */
+
+@media (min-width: 1401px) {
+
+    section {
+        width: 600px;
+        min-height: 500px;
+    }
+
+    #foto img {
+        width: 400px;
+    }
+}
