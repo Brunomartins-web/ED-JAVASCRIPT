@@ -73,9 +73,11 @@ function verificar(){
         res.style.fontSize = "25px"
         res.style.fontWeight = "500"
 
-        img.style.width = "400px"
+        img.style.width = "min(300px, 75vw)";
+    }
         img.style.borderRadius = "50%"
-        img.style.height = "400px"
+        img.style.height = "min(300px, 75vw)";
+    }
         img.style.marginTop = "15px"
         res.appendChild(img)
     }

@@ -541,15 +541,7 @@ footer {
     #res {
         font-size: 20px;
     }
-
-
-    #res img {
-        width: min(300px, 75vw) !important;
-
-        height: min(300px, 75vw) !important;
-    }
-
-
+    
     footer {
         font-size: 13px;
     }
