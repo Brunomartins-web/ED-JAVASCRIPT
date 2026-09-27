@@ -1,4 +1,4 @@
-```css
+
 /* =========================
    RESET
 ========================= */
@@ -372,9 +372,10 @@ footer {
 }
 
 
-/* ==================================================
-   MONITOR 27" - 1920x1080
-================================================== */
+/* =========================
+   MONITOR 27"
+   1920x1080
+========================= */
 
 @media (min-width: 1401px) {
 
@@ -382,16 +383,13 @@ footer {
         padding: 40px;
     }
 
-
     header {
         margin-bottom: 30px;
     }
 
-
     header h1 {
         font-size: 4rem;
     }
-
 
     section {
         width: 720px;
@@ -417,18 +415,15 @@ footer {
         padding: 45px;
     }
 
-
     header h1 {
         font-size: 4.5rem;
     }
-
 
     #txtano,
     .sexo,
     .btn-verificar {
         width: 500px;
     }
-
 
     #res img {
         width: 450px !important;
@@ -448,11 +443,9 @@ footer {
         padding: 25px;
     }
 
-
     header h1 {
         font-size: 3rem;
     }
-
 
     section {
         width: 600px;
@@ -462,13 +455,11 @@ footer {
         padding: 30px;
     }
 
-
     #txtano,
     .sexo,
     .btn-verificar {
         width: 400px;
     }
-
 
     #res img {
         width: 350px !important;
@@ -488,18 +479,15 @@ footer {
         padding: 15px;
     }
 
-
     header {
         margin-bottom: 18px;
     }
-
 
     header h1 {
         font-size: 2.2rem;
 
         letter-spacing: 1px;
     }
-
 
     section {
         width: 100%;
@@ -513,11 +501,9 @@ footer {
         border-radius: 16px;
     }
 
-
     .ano-nascimento {
         font-size: 25px;
     }
-
 
     #txtano,
     .sexo,
@@ -525,24 +511,22 @@ footer {
         width: 100%;
     }
 
-
     .sexo {
         gap: 15px;
 
         font-size: 17px;
     }
 
-
     .btn-verificar {
         font-size: 20px;
     }
 
-
     #res {
         font-size: 20px;
     }
-    
+
     footer {
         font-size: 13px;
     }
 }
+
