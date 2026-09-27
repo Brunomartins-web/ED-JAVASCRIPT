@@ -26,7 +26,7 @@ function verificar(){
                 img.setAttribute("src", "Bebe-homem.png")
                 genero = "Uma Criança"
                  res.innerHTML = `Detectamos ${genero} com ${idade} anos`;
-            } else if (idade < 21){
+            } else if (idade < 18){
                 //Jovem
                 img.setAttribute("src", "Menino-adolecente.png")
                  res.innerHTML = `Detectamos ${genero} com ${idade} anos`;
@@ -49,19 +49,33 @@ function verificar(){
         if (formSex [1].checked){
             genero = "Mulher"
             if(idade >=0 && idade <=1){
-                img.setAttribute("Src", "Bebe-mulher.png")
+                img.setAttribute("src", "Bebe-mulher.png")
                 res.innerHTML=`Destectamos ${genero} com ${idade} ano`
             } else if ( idade >= 2 && idade < 10){
-                
+                img.setAttribute("src", "Bebe-mulher.png")
+                res.innerHTML=`Destectamos ${genero} com ${idade} anos`
+            } else if (idade < 18){
+                img.setAttribute("src", "Menina-adolescente.png")
+                res.innerHTML=`Destectamos ${genero} com ${idade} anos`
+            } else if (idade < 50){
+                img.setAttribute("src","Mulher.png")
+                res.innerHTML=`Destectamos ${genero} com ${idade} anos`
+            } else if(idade < 100){
+                img.setAttribute("src","Mulher-velha.png")
+                 res.innerHTML=`Destectamos ${genero} com ${idade} anos`
+            } else{
+                img.setAttribute("src","esqueleto.png")
+                document.body.style.background = "black"
+                res.innerHTML=`Destectamos ${genero} com ${idade} anos`
             }
         }
         res.style.textAlign = "center"
         res.style.fontSize = "25px"
         res.style.fontWeight = "500"
 
-        img.style.width = "min(400px, 70vw)"
+        img.style.width = "400px"
         img.style.borderRadius = "50%"
-        img.style.height = "auto"
+        img.style.height = "400px"
         img.style.marginTop = "15px"
         res.appendChild(img)
     }

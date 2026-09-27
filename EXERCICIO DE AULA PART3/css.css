@@ -1,10 +1,11 @@
+```css
 /* =========================
    RESET
 ========================= */
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -16,7 +17,11 @@
 body {
     min-height: 100vh;
 
-    background: rgb(5, 35, 126);
+    background: linear-gradient(
+        135deg,
+        rgb(5, 35, 126),
+        rgb(10, 65, 170)
+    );
 
     font: normal 15pt Arial;
 
@@ -26,10 +31,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    /* Espaçamento para evitar que o conteúdo
-       encoste nas laterais em telas pequenas */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px;
+
+    overflow-x: hidden;
+
+    transition: background 0.4s ease;
 }
 
 
@@ -39,204 +45,311 @@ body {
 
 header {
     display: flex;
-
     justify-content: center;
+    align-items: center;
 
     text-align: center;
 
-    margin: 0,5rem;
+    margin-bottom: 25px;
 }
 
 
 header h1 {
     color: white;
 
-    text-align: center;
-
     font-family: "DotGothic16", sans-serif;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
 
     font-weight: 400;
 
-    font-style: normal;
+    letter-spacing: 2px;
 
-    /* O clamp faz o tamanho se adaptar
-       automaticamente à tela */
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    padding-bottom: 15px;
+    text-shadow:
+        3px 3px 0 rgba(0, 0, 0, 0.25);
+
+    padding-bottom: 5px;
 }
 
 
 /* =========================
-   SECTION
+   CONTAINER PRINCIPAL
 ========================= */
 
 section {
+    width: 720px;
+
+    min-height: 600px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
     display: flex;
 
     flex-direction: column;
+
     align-items: center;
 
-    gap: 20px;
-
-    background: white;
-
-    border-radius: 10px;
-
-    padding: 15px;
-
-    /*
-       Em uma tela grande:
-       máximo de 600px.
-
-       Em uma tela pequena:
-       ocupa no máximo 90% da largura.
-    */
-    width: min(600px, 90vw);
-
-    /*
-       Não usamos mais uma altura fixa.
-       Assim o conteúdo pode crescer
-       conforme necessário.
-    */
-    min-height: 500px;
-
-    height: auto;
+    gap: 24px;
 
     box-shadow:
-        5px 5px 10px rgba(0, 0, 0, 0.418);
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    transition: 0.3s ease;
 }
 
 
 /* =========================
-   MENSAGEM
+   TEXTO / ANO
 ========================= */
 
 .ano-nascimento {
-    font-size: 30px;
+    font-size: 32px;
 
     font-family: "DotGothic16", sans-serif;
 
     font-weight: 400;
 
-    font-style: normal;
-
     text-align: center;
-    padding-bottom: 10px;
-}
 
-#txtano {
-    width: 300px;
-    padding: 12px 15px;
+    color: #222;
 
-    border: 2px solid #333;
-    border-radius: 10px;
-
-    background-color: white;
-
-    font-size: 16px;
-
-    outline: none;
-
-    transition: 0.3s;
-}
-
-/* Quando o usuário clica no input */
-input:focus {
-    border-color: #0f0fac;
-
-    box-shadow: 0 0 8px rgba(16, 19, 176, 0.4);
-}
-
-/* Estilo do texto de exemplo */
-input::placeholder {
-    color: #999;
-}
-
-.sexo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 10px;
-    width: 300px;
-    padding: 12px 15px;
-
-    border: 2px solid #333;
-    border-radius: 10px;
-
-    background-color: white;
-
-     font-family: "DotGothic16", sans-serif;
-
-
-    font-size: 18px;
-
-    outline: none;
-
-    transition: 0.3s;
-
-}
-
-.btn-verificar{
-     width: 300px;
-    padding: 12px 15px;
-
-    border: 2px solid #333;
-    border-radius: 10px;
-
-    background-color: white;
-
-     font-family: "DotGothic16", sans-serif;
-
-
-    font-size: 22px;
-
-    outline: none;
-
-    transition: 0.3s;
-
-}
-
-.btn-verificar:hover{
-     border-color: #0f0fac;
-
-    box-shadow: 0 0 8px rgba(16, 19, 176, 0.4);
-}
-
-#res{
-
-    padding-top: 40px;
-    font-size: 20px;
-
-    font-family: "DotGothic16", sans-serif;
-
-    font-weight: 400;
-
-    font-style: normal;
-
-    text-align: center;
+    margin-bottom: 5px;
 }
 
 
 /* =========================
-   FOTO
+   INPUT ANO
 ========================= */
 
-#foto img {
-    border-radius: 50%;
+#txtano {
+    width: 450px;
 
-    /*
-       A imagem nunca passa de 400px,
-       mas também não ultrapassa
-       a largura disponível.
-    */
-    width: min(400px, 70vw);
+    height: 55px;
 
-    height: auto;
+    padding: 12px 18px;
+
+    border: 2px solid #333;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    font-size: 19px;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+#txtano:hover {
+    border-color: #0f0fac;
+}
+
+
+#txtano:focus {
+    border-color: #0f0fac;
+
+    box-shadow:
+        0 0 0 4px rgba(15, 15, 172, 0.12);
+}
+
+
+#txtano::placeholder {
+    color: #999;
+}
+
+
+/* =========================
+   SEXO
+========================= */
+
+.sexo {
+    width: 450px;
+
+    min-height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 12px 18px;
+
+    border: 2px solid #333;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-size: 19px;
+
+    transition: 0.3s ease;
+}
+
+
+.sexo:hover {
+    border-color: #0f0fac;
+
+    box-shadow:
+        0 0 0 4px rgba(15, 15, 172, 0.08);
+}
+
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+
+.sexo input[type="radio"] {
+    width: 18px;
+
+    height: 18px;
+
+    accent-color: #0f0fac;
+
+    cursor: pointer;
+}
+
+
+.sexo label {
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.sexo label:hover {
+    color: #0f0fac;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btn-verificar {
+    width: 450px;
+
+    min-height: 58px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #0f0fac;
+
+    color: white;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 15px rgba(15, 15, 172, 0.25);
+
+    transition: all 0.25s ease;
+}
+
+
+.btn-verificar:hover {
+    background: #08087d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(15, 15, 172, 0.35);
+}
+
+
+.btn-verificar:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 4px 8px rgba(15, 15, 172, 0.25);
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+#res {
+    width: 100%;
+
+    padding-top: 20px;
+
+    color: #222;
+
+    font-size: 25px;
+
+    font-family: "DotGothic16", sans-serif;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOTO GERADA PELO SCRIPT
+========================= */
+
+#res img {
+    display: block;
+
+    width: 400px !important;
+
+    height: 400px !important;
+
+    max-width: 100%;
 
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
+
+    margin: 20px auto 0;
+
+    border-radius: 50% !important;
+
+    border: 6px solid white;
+
+    outline: 3px solid #0f0fac;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.30);
+
+    transition: 0.3s ease;
+}
+
+
+#res img:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -245,13 +358,123 @@ input::placeholder {
 ========================= */
 
 footer {
-    margin-top: 15px;
+    margin-top: 25px;
 
     color: white;
 
     text-align: center;
 
     font-style: italic;
+
+    font-size: 15px;
+
+    opacity: 0.9;
+}
+
+
+/* ==================================================
+   MONITOR 27" - 1920x1080
+================================================== */
+
+@media (min-width: 1401px) {
+
+    body {
+        padding: 40px;
+    }
+
+
+    header {
+        margin-bottom: 30px;
+    }
+
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+
+    section {
+        width: 720px;
+
+        min-height: 600px;
+
+        padding: 40px;
+    }
+}
+
+
+/* =========================
+   TELAS MUITO GRANDES
+========================= */
+
+@media (min-width: 2200px) {
+
+    section {
+        width: 800px;
+
+        min-height: 650px;
+
+        padding: 45px;
+    }
+
+
+    header h1 {
+        font-size: 4.5rem;
+    }
+
+
+    #txtano,
+    .sexo,
+    .btn-verificar {
+        width: 500px;
+    }
+
+
+    #res img {
+        width: 450px !important;
+
+        height: 450px !important;
+    }
+}
+
+
+/* =========================
+   NOTEBOOK
+========================= */
+
+@media (min-width: 601px) and (max-width: 1400px) {
+
+    body {
+        padding: 25px;
+    }
+
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+
+    section {
+        width: 600px;
+
+        min-height: 500px;
+
+        padding: 30px;
+    }
+
+
+    #txtano,
+    .sexo,
+    .btn-verificar {
+        width: 400px;
+    }
+
+
+    #res img {
+        width: 350px !important;
+
+        height: 350px !important;
+    }
 }
 
 
@@ -267,62 +490,68 @@ footer {
 
 
     header {
-        margin: 1rem 0;
+        margin-bottom: 18px;
+    }
+
+
+    header h1 {
+        font-size: 2.2rem;
+
+        letter-spacing: 1px;
     }
 
 
     section {
         width: 100%;
 
-        min-height: 400px;
+        min-height: 450px;
 
-        padding: 20px;
+        padding: 25px 18px;
+
+        gap: 18px;
+
+        border-radius: 16px;
     }
 
 
-    #foto img {
-        width: min(300px, 70vw);
+    .ano-nascimento {
+        font-size: 25px;
+    }
+
+
+    #txtano,
+    .sexo,
+    .btn-verificar {
+        width: 100%;
+    }
+
+
+    .sexo {
+        gap: 15px;
+
+        font-size: 17px;
+    }
+
+
+    .btn-verificar {
+        font-size: 20px;
+    }
+
+
+    #res {
+        font-size: 20px;
+    }
+
+
+    #res img {
+        width: min(300px, 75vw) !important;
+
+        height: min(300px, 75vw) !important;
     }
 
 
     footer {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
-
-/* =========================
-   NOTEBOOK
-========================= */
-
-@media (min-width: 601px) and (max-width: 1400px) {
-
-    section {
-        width: 550px;
-        min-height: 450px;
-    }
-
-    #foto img {
-        width: 330px;
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-}
-
-
-/* =========================
-   TELAS GRANDES
-========================= */
-
-@media (min-width: 1401px) {
-
-    section {
-        width: 600px;
-        min-height: 500px;
-    }
-
-    #foto img {
-        width: 400px;
-    }
-}
+```
