@@ -44,8 +44,16 @@ function verificar(){
                 document.body.style.background = "black"
                 res.innerHTML = `Detectamos ${genero} com ${idade} anos`;
             }
-        } else if (formSex [1].checked){
+        }
+        
+        if (formSex [1].checked){
             genero = "Mulher"
+            if(idade >=0 && idade <=1){
+                img.setAttribute("Src", "Bebe-mulher.png")
+                res.innerHTML=`Destectamos ${genero} com ${idade} ano`
+            } else if ( idade >= 2 && idade < 10){
+                
+            }
         }
         res.style.textAlign = "center"
         res.style.fontSize = "25px"
