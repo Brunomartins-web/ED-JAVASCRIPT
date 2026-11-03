@@ -22,3 +22,21 @@ console.log('tudo bem')
 console.log('tudo bem')
 console.log('tudo bem')
 console.log('tudo bem')*/
+
+
+
+
+
+
+
+
+for(let c= 1; c <=100; c++){
+console.log(`Passo ${c}`)
+}
+
+// let c = 1
+
+// while(c<=10){
+//     console.log(`${c}`)
+//     c++
+// }
