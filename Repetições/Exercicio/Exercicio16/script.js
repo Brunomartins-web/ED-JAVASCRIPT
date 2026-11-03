@@ -20,7 +20,7 @@ let res = document.getElementById("res")
         p = 1
     }
 
-
+    
     if(i < f){
         for(let c = i; c <= f; c += p){
             res.innerHTML += `${c} \u{1f449}`
