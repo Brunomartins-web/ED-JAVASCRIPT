@@ -1,6 +1,6 @@
 body{
 height: 100vh;
-background: rgb(5, 163, 147);
+background: rgb(163, 5, 5);
 font: normal 15pt Arial;
 display: flex;
 flex-direction:column;
@@ -29,6 +29,12 @@ footer{
 
 .espaco{
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#res{
+     display: flex;
     flex-direction: column;
     gap: 10px;
 }
